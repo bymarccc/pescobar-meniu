@@ -62,6 +62,8 @@ var D=[
 ["Fructe de mare",[["Picioare de king crab",600,K],["Langustine",530,K],["Homar California",300,K],["Homar albastru",420,K]]],
 ["Butterfly Fish",[["Butterfly lup de mare",150,K],["Butterfly doradă roșie",200,K],["Butterfly doradă",150,K],["Butterfly crap",100,K],["Butterfly chefal",80,K]]]
 ];
+var O=["Antreu","Aperitive","Butterfly Fish","Direct din mare","Fructe de mare","Gratar","La Tava","Peste la sare","Poke","Prajit","Seafood boil","Spiadine","Steak de Peste","Tocanite","Spaghete"];
+D.sort(function(x,y){return O.indexOf(x[0])-O.indexOf(y[0]);});
 var h="";
 D.forEach(function(s){
 if(s[1]==="boil"){
