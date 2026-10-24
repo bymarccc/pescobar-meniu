@@ -27,7 +27,7 @@ li .n{flex:0 1 auto}
 li .d{flex:1;border-bottom:1px dotted rgba(244,241,234,.28);transform:translateY(-3px);min-width:8px}
 li .p{color:var(--gold);font-weight:700;white-space:nowrap}
 li .p small{color:var(--muted);font-weight:400;font-size:.72rem}
-.boil li{padding:6px 0;justify-content:center}
+.boil li{padding:6px 0}
 footer{text-align:center;color:var(--muted);font-size:.68rem;letter-spacing:.14em;margin-top:20px;text-transform:uppercase}
 @media(min-width:700px){.grid{grid-template-columns:1fr 1fr}.frame{padding:36px 30px 26px}h1{font-size:3rem}}
 @media(min-width:1050px){.grid{grid-template-columns:repeat(3,1fr)}li{font-size:.88rem}}
@@ -46,14 +46,14 @@ footer{text-align:center;color:var(--muted);font-size:.68rem;letter-spacing:.14e
 <script>
 var P="porție",K="kg";
 var D=[
-["Aperitive",[["Lacherdă de pălămidă",25,P],["Hummus",41,P],["Hummus cu creveți"],["Icre de crap",28,P],["Icre de știucă",28,P],["Sashimi"],["Nigiri"]]],
-["Carne",[["Cotlete de berbecuț"],["Aripioare de pui"],["Kafta"],["Adana",68,P]]],
+["Aperitive",[["Lacherdă de pălămidă",25,P],["Humus",41,P],["Icre",28,P]]],
+["Carne",[["Adana",68,P]]],
 ["Gătit la tavă",[["Hamsie",25,P],["Stavrid",30,P],["Lufăr",100,K],["Barbun",35,P],["Sardine",30,P],["Macrou",35,P],["Pălămidă",35,P],["Merluciu",35,P]]],
 ["Tocană – Ghiveci",[["Tocană ghiveci de pălămidă",45,P],["Tocană ghiveci de John Dory",65,P],["Tocană ghiveci de somon",55,P],["Tocană ghiveci de sturion",55,P],["Tigaie picantă",67,P],["Tocană de rapane",55,P]]],
-["Frigărui",[["Frigărui de miel",89,P],["Frigărui de vită",87,P],["Frigărui de mangalița"]]],
+["Frigărui",[["Frigărui de miel",89,P],["Frigărui de vită",87,P]]],
 ["Pește la sare",[["Doradă la sare",75,"bucată"],["Lup de mare la sare",75,"bucată"]]],
 ["Steak",[["Steak de ton",200,K],["Steak de rândunică de mare",300,K],["Steak de pește-spadă",300,K],["Steak de sole",300,K],["Steak de John Dory",300,K],["Steak de grouper",300,K],["Steak de caracatiță gătită",300,K],["Steak de caracatiță crudă",250,K]]],
-["Seafood boil","boil",["Tentacule de caracatiță","Creveți","Raci","Scoici","Rapane"]],
+["Seafood boil","boil",[["Tentacule de caracatiță",15],["Creveți",15],["Raci",15],["Scoici",15],["Rapane",15]]],
 ["Spiadine",[["Spiadină de ton",55,P],["Spiadină de sturion",55,P],["Spiadină de somon",65,P],["Spiadină de pește-călugăr",69,P],["Spiadină de grouper",75,P],["Spiadină de creveți sălbatici",60,P],["Spiadină de calamar cu feta",75,P],["Spiadină de calamar",65,P],["Spiadină de amberjack",75,P]]],
 ["Spaghete",[["Spaghete vongole veraci",67,P],["Spaghete telline",67,P]]],
 ["Gătite prăjit",[["Pui de baltă",72,P],["Fritto misto",73,P],["Creveți pane",73,P],["Caraș prăjit",50,K]]],
@@ -65,8 +65,8 @@ var D=[
 var h="";
 D.forEach(function(s){
 if(s[1]==="boil"){
-h+='<section class="card boil"><h2>'+s[0]+'</h2><p class="note">Porumb, cartofi și ou incluse</p><p class="pick">La alegere — 20 lei / 100 g</p><ul>';
-s[2].forEach(function(n){h+="<li><span class=\"n\">"+n+"</span></li>";});
+h+='<section class="card boil"><h2>'+s[0]+'</h2><p class="note">Porumb, cartofi și ou incluse</p><p class="pick">Seafood boil — 20 lei / porție</p><ul>';
+s[2].forEach(function(n){h+='<li><span class="n">'+n[0]+'</span><span class="d"></span><span class="p">'+n[1]+' <small>lei / 100 g</small></span></li>';});
 h+="</ul></section>";return;}
 h+='<section class="card"><h2>'+s[0]+"</h2><ul>";
 s[1].forEach(function(i){h+='<li><span class="n">'+i[0]+'</span><span class="d"></span><span class="p">'+(i[1]?i[1]+" <small>lei / "+i[2]+"</small>":"–")+"</span></li>";});
