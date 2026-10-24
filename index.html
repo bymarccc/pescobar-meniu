@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0f1b2a">
+<title>Meniu • Pește și Fructe de Mare</title>
+<meta name="description" content="Meniu: pește, fructe de mare, preparate la grătar.">
+<style>
+:root{--bg:#0f1b2a;--gold:#c9a96e;--text:#f4f1ea;--muted:#9fb0c4;--line:rgba(201,169,110,.35)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;line-height:1.35;padding:max(16px,env(safe-area-inset-top)) 16px max(24px,env(safe-area-inset-bottom))}
+.frame{max-width:1180px;margin:0 auto;border:1px solid var(--line);padding:28px 18px 24px}
+header{text-align:center;margin-bottom:22px}
+h1{color:var(--gold);font-size:2.2rem;letter-spacing:.14em;font-weight:800}
+.sub{font-size:.72rem;letter-spacing:.16em;color:var(--text);margin-top:6px}
+.rule{width:60%;height:1px;background:var(--line);margin:18px auto 0}
+.cols{columns:1;column-gap:44px}
+section{break-inside:avoid;margin-bottom:24px}
+h2{color:var(--gold);font-size:.95rem;letter-spacing:.1em;text-transform:uppercase;font-weight:800;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.note{font-size:.76rem;color:var(--muted);margin:-2px 0 8px}
+ul{list-style:none}
+li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:6px 0;font-size:.95rem}
+li .n{flex:1}
+li .p{color:var(--gold);font-weight:700;white-space:nowrap;text-align:right}
+li .p small{color:var(--muted);font-weight:400;font-size:.72rem}
+footer{text-align:center;color:var(--muted);font-size:.68rem;letter-spacing:.14em;margin-top:8px;text-transform:uppercase}
+@media(min-width:700px){.cols{columns:2}h1{font-size:2.8rem}.frame{padding:40px 34px 30px}}
+@media(min-width:1050px){.cols{columns:3}li{font-size:.9rem}}
+</style>
+</head>
+<body>
+<div class="frame">
+<header>
+<h1>MENIU</h1>
+<div class="sub">PEȘTE • FRUCTE DE MARE • PREPARATE LA GRĂTAR</div>
+<div class="rule"></div>
+</header>
+<div class="cols">
+<div id="m"></div>
+</div>
+<footer>Meniu • Pește și fructe de mare</footer>
+</div>
+<script>
+var D=[
+["Aperitive",null,[["Lacherdă de pălămidă","25","porție"],["Hummus"],["Hummus cu creveți"],["Icre de crap"],["Icre de știucă"],["Sashimi"],["Nigiri"]]],
+["Carne",null,[["Cotlete de berbecuț"],["Aripioare de pui"],["Kafta"],["Adana","68","porție"],["Frigărui de miel","89","porție"],["Frigărui de vită","87","porție"],["Frigărui de mangalița"]]],
+["Gătit la tavă",null,[["Hamsie","25","porție"],["Stavrid","30","porție"],["Lufăr","100","kg"],["Barbun","35","porție"],["Sardine","30","porție"],["Macrou","35","porție"],["Pălămidă","35","porție"],["Merluciu","35","porție"]]],
+["Tocană – Ghiveci",null,[["Tocană ghiveci de pălămidă","45","porție"],["Tocană ghiveci de John Dory","65","porție"],["Tocană ghiveci de somon","55","porție"],["Tocană ghiveci de sturion","55","porție"],["Tigaie picantă de …","67","porție"],["Tocană de rapane","55","porție"]]],
+["Steak",null,[["Steak de ton","200","kg"],["Steak de rândunică de mare","300","kg"],["Steak de pește-spadă","300","kg"],["Steak de sole","300","kg"],["Steak de John Dory","300","kg"],["Steak de grouper","300","kg"],["Steak de caracatiță gătită","300","kg"],["Steak de caracatiță crudă","250","kg"]]],
+["Spiadine",null,[["Spiadină de ton","55","porție"],["Spiadină de sturion","55","porție"],["Spiadină de somon","65","porție"],["Spiadină de pește-călugăr","69","porție"],["Spiadină de grouper","75","porție"],["Spiadină de creveți sălbatici","60","porție"],["Spiadină de calamar cu feta","75","porție"],["Spiadină de calamar","65","porție"],["Spiadină de amberjack","75","porție"]]],
+["Seafood boil","porumb, cartofi, ou",[["Tentacule de caracatiță","20","100 g"],["Creveți"],["Raci"],["Scoici"],["Rapane mărunțite"]]],
+["Gătite prăjit",null,[["Pui de baltă","72","porție"],["Fritto misto","73","porție"],["Creveți pane","73","porție"],["Caraș prăjit","50","kg"]]],
+["Poke",null,[["Poke cu somon","45","porție"],["Poke cu ton","45","porție"],["Poke cu John Dory","45","porție"]]],
+["Pește la sare",null,[["Doradă la sare","75","bucată"],["Lup de mare la sare","75","bucată"]]],
+["Fructe de mare",null,[["Picioare de king crab","600","kg"],["Langustine","530","kg"],["Homar California","300","kg"],["Homar albastru","420","kg"]]],
+["Direct din mare",null,[["Pălămidă","35","kg"],["Sole fresh","200","kg"],["Rândunică de mare fresh","200","kg"],["Pește-călugăr fresh","200","kg"],["John Dory fresh","200","kg"],["Doradă regală fresh","200","kg"],["Amberjack fresh","200","kg"]]],
+["Pește butterfly",null,[["Butterfly lup de mare","150","kg"],["Butterfly doradă roșie","200","kg"],["Butterfly doradă","150","kg"],["Butterfly crap","100","kg"],["Butterfly chefal","80","kg"]]]
+];
+var h="";
+D.forEach(function(s){h+="<section><h2>"+s[0]+"</h2>"+(s[1]?"<p class=\"note\">"+s[1]+"</p>":"")+"<ul>";
+s[2].forEach(function(i){h+="<li><span class=\"n\">"+i[0]+"</span><span class=\"p\">"+(i[1]?i[1]+" <small>lei / "+i[2]+"</small>":"")+"</span></li>";});
+h+="</ul></section>";});
+var m=document.getElementById("m");m.style.display="contents";m.innerHTML=h;
+</script>
+</body>
+</html>
