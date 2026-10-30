@@ -74,11 +74,11 @@ D.sort(function(x,y){return O.indexOf(x[0])-O.indexOf(y[0]);});
 var h="";
 D.forEach(function(s){
 if(s[1]==="boil"){
-h+='<section class="card boil"><h2>'+s[0]+'</h2><p class="note">Porumb, cartofi și ou incluse</p><p class="pick">Seafood boil — 20 lei / porție</p><ul>';
+h+='<section class="card boil"><h2>'+s[0]+'</h2><p class="note">Porumb, cartofi și ou incluse</p><p class="pick">Seafood boil — 20 lei</p><ul>';
 s[2].forEach(function(n){h+='<li><span class="n">'+n[0]+'</span><span class="d"></span><span class="p">'+n[1]+' <small>lei / 100 g</small></span></li>';});
 h+="</ul></section>";return;}
 h+='<section class="card"><h2>'+s[0]+"</h2><ul>";
-s[1].forEach(function(i){h+='<li><span class="n">'+i[0]+'</span><span class="d"></span><span class="p">'+(i[1]?i[1]+" <small>lei / "+i[2]+"</small>":"–")+"</span></li>";});
+s[1].forEach(function(i){h+='<li><span class="n">'+i[0]+'</span><span class="d"></span><span class="p">'+(i[1]?i[1]+" <small>lei"+(i[2]==="bucată"?" / bucată":"")+"</small>":"–")+"</span></li>";});
 h+="</ul></section>";});
 document.getElementById("g").innerHTML=h;
 </script>
